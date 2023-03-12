@@ -52,6 +52,30 @@ class MathWild
       result
     end
 
+    #to subtract
+    def sub(*arg)
+      result = 0
+      args.each do |element|
+        return 0 unless number?(element)
+
+        result -= element
+      end
+      result
+    end
+
+    def sub_arr(args)
+      return 0 unless arr_number?(args)
+
+      result = 0
+      args.each do |element|
+        return 0 unless number? element
+
+        result -= element
+      end
+      result
+    end
+
+
     # forced sum
     # try to sum even with an string and ignore if is not possible to convert
     def force_sum(*args)
@@ -61,6 +85,16 @@ class MathWild
         return 0 unless number?(element)
 
         result += element
+      end
+      result
+    end
+    def force_sub(*args)
+      result = 0
+      args.each do |element|
+        element = to_num(element)
+        return 0 unless number?(element)
+
+        result -= element
       end
       result
     end
