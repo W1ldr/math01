@@ -108,14 +108,12 @@ class MathWild
       end
       result
     end
-    #todo: fix it 
     def dev_arr(args)
       return 0 unless arr_number?(args)
 
       result = args.first
       args[1..].each do |element|
-        return 0 unless number? element && element != 0
-
+        return 0 unless number?(element) && element != 0
         result /= element
       end
       result
