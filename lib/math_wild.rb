@@ -54,8 +54,8 @@ class MathWild
 
     #to subtract
     def sub(*args)
-      result = 0
-      args.each do |element|
+      result = args.first
+      args[1..].each do |element|
         return 0 unless number?(element)
 
         result -= element
@@ -66,8 +66,8 @@ class MathWild
     def sub_arr(args)
       return 0 unless arr_number?(args)
 
-      result = 0
-      args.each do |element|
+      result = args.first
+      args[1..].each do |element|
         return 0 unless number? element
 
         result -= element
