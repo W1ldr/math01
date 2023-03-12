@@ -1,2 +1,2 @@
-to build run gem install ./math01.gemspec
-to install run gem install build_name
+to build run: gem build ./math_wild.gemspec
+to install run: gem install build_name
