@@ -53,7 +53,7 @@ class MathWild
     end
 
     #to subtract
-    def sub(*arg)
+    def sub(*args)
       result = 0
       args.each do |element|
         return 0 unless number?(element)
