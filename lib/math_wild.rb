@@ -123,23 +123,30 @@ class MathWild
 
 
     # forced sum
-    # try to sum even with an string and ignore if is not possible to convert
+    # try to sum even with an string or array and ignore if is not possible to convert
     def force_sum(*args)
       result = 0
       args.each do |element|
-        element = to_num(element)
-        return 0 unless number?(element)
-
+        if element.is_a?(Array)
+          element = sum_arr(element)
+        else
+          element = to_num(element)
+          return 0 unless number?(element)
+        end
         result += element
       end
       result
     end
+    
     def force_sub(*args)
-      result = 0
-      args.each do |element|
-        element = to_num(element)
-        return 0 unless number?(element)
-
+      result = args.first
+      args[1..].each do |element|
+        if element.is_a?(Array)
+          element = sum_arr(element)
+        else
+          element = to_num(element)
+          return 0 unless number?(element)
+        end
         result -= element
       end
       result
