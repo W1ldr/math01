@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "math_wild"
-  s.version     = "0.0.2"
+  s.version     = "0.0.3"
   s.summary     = "Math collection"
   s.description = "A study collection of function to help simple math"
   s.authors     = ["Wilder 'W1ldr' Ribeiro"]
