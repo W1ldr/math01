@@ -139,7 +139,11 @@ class MathWild
     end
     
     def force_sub(*args)
-      result = args.first
+      if args.first.is_a?(Array)
+        result = sub_arr(args.first)
+      else
+        result = to_num(args.first)
+      end
       args[1..].each do |element|
         if element.is_a?(Array)
           element = sum_arr(element)

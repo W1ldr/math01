@@ -34,3 +34,8 @@ functions avaliable through **MathWild** class
    1. ```bash
       gem install math_wild
        ```
+   ## to run tests
+   1. ```bash
+      rake test or rake
+       ```
+
