@@ -6,6 +6,6 @@ Gem::Specification.new do |s|
   s.authors     = ["Wilder 'W1ldr' Ribeiro"]
   s.email       = "dewillribeiro@gmail.com"
   s.files       = ["lib/math_wild.rb"]
-  s.homepage    = "https://rubygems.org/gems/**"
+  s.homepage    = "https://rubygems.org/gems/math_wild"
   s.license     = "MIT"
 end
